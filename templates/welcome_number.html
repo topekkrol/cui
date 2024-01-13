@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Number</title>
+</head>
+<body>
+    <p>Your lucky number is {{ liczba }}</p>
+    <form action="{{ url_for('dodatkowy_przycisk') }}" method="post">
+        <label for="choice">Enter your choice:</label>
+        <input type="number" name="choice" id="choice" required>
+        <button type="submit" name="action" value="submit">Submit</button>
+    </form>
+    <form action="{{ url_for('index') }}" method="get">
+        <button type="submit" name="action" value="goback">Go Back to Main Page</button>
+    </form>
+</body>
+</html>
